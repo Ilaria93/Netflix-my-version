@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+header{
+    background-color: grey;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.header-left {
+    float: left;
+    width: 50%;
+}
+.header-right{
+    float: right;
+    width: 50%;
+    padding: 24px 0;
+}
+.logo img{
+    padding: 20px;
+    max-width: 25%;
+}
+.searchInput {
+    display: flex;
+    align-items: baseline;
+    border: solid 1px rgba(255,255,255,.85);
+    max-width:212px;
+    opacity: 1;
+    transition-duration: 300ms;
+}
+.searchInput input {
+    color: #fff;
+    display: inline-block;
+    background: 0 0;
+    border: none;
+    padding: 7px;
+    font-size: 14px;
+    width: 100%;
+    outline: 0;
+    line-height: normal;
+}
+.searchInput span > i {
+    color: white;
+    padding: 0 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
