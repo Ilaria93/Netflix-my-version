@@ -30,7 +30,18 @@
                 </div>
             </div>
         </header>
-
+        <div id="film-find">
+            <!-- TEMPLATE -->
+                <script id="film-template" type="text/x-handlebars-template">
+                    <div class="{{classGenre}}">
+                        <img src='{{posterImg}}' alt="">
+                        <h3>{{titolo}}</h3>
+                        <h4>{{titolo noriginale}}</h4>
+                        <p>{{lingua}}</p>
+                        <p>{{voto}}</p>
+                    </div>
+                </script>
+        </div>
          <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
