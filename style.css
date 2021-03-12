@@ -5,25 +5,59 @@
     font-family: 'Comfortaa', cursive;
 }
 header{
-    background-color: grey;
+    background-color: #80808000;
 }
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.header-content{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .header-left {
-    float: left;
     width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: center;
 }
-.header-right{
-    float: right;
+.header-left img{
+    max-width: 18%;
+}
+.left-menu{
+    margin: 0;
+    padding-left: 45px;
+    align-self: center;
+}
+#menu-navigation{
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 10px;
+}
+#menu-navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.header-right {
     width: 50%;
-    padding: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
 }
-.logo img{
-    padding: 20px;
-    max-width: 25%;
+.right-menu{
+    list-style-type: none;
+    margin: 0;
+}
+.active{
+    display: none;
+}
+.on-click{
+    display: inline-block;
+    left: -42px;
+    position: relative;
+}
+.visible{
+    display: block;
 }
 .searchInput {
     display: flex;
@@ -48,5 +82,69 @@ header{
     color: white;
     padding: 0 6px;
     cursor: pointer;
-    font-size: 13px;
+}
+.name{
+    text-transform: uppercase;
+}
+.fas{
+    font-size: 20px;
+    vertical-align: middle;
+}
+.fa-caret-down{
+    font-size: 14px;
+    padding: 5px;
+    vertical-align: middle;
+    transition: 1s;
+}
+.fa-caret-down:hover{
+    transform: rotate(180deg);
+}
+.profile{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile img{
+    max-height: 100%;
+    border-radius: 5px;
+}
+#wrapper{
+    padding-top:30px;
+}
+.title-search{
+    font-size: 20px;
+}
+body{
+    background-color: black;
+}
+.title-search{
+    color:white;
+}
+.card{
+    flex-direction: row;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    background: 0;
+}
+.card h4, .card h6{
+    color:white;
+}
+.card-flag{
+    display: flex;
+    justify-content: center;
+}
+.card-flag img{
+    max-width: 55px;
+    padding: 10px;
+}
+.star{
+    display: flex;
+    justify-content: center;
+}
+.fa-star{
+    font-size: 15px;
+    color: #ffb856;
 }

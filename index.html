@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Netflix</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/d922289bad.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,25 +13,104 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="clearfix">
-            <div class="header-left">
-                <div class="logo">
-                    <img src="netflix.png" alt="logo">
-                </div>
-            </div>
-            <div class="header-right">
-                <div class="searchInput ">
-                    <span class="icon-search">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="searchInput" placeholder="" data-search-input="true" dir="ltr" data-uia="search-box-input">
-                    <span class="icon-close">
-                        <i class="fas fa-times"></i>
-                    </span>
+        <header>
+            <div class="header-content container">
+                <div class="row">
+                    <div class="header-left">
+                        <img src="immagini/netflix.png" alt="logo">
+                        <ul class="left-menu">
+                            <li id="menu-navigation">
+                                <a href="#">Home</a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">Serie TV</a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">Film</a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">Nuovi e popolari</a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">La mia lista</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-right">
+                        <ul class="right-menu">
+                            <li id="menu-navigation" class="first">
+                                <a href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li>
+                            <li id="menu navigation" class="second active">
+                                <div class="searchInput">
+                                    <span class="icon-search">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <input type="text" name="searchInput" placeholder="" id="search">
+                                    <span class="icon-close">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#" class="name">Bambini</a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">
+                                    <i class="fas fa-gift"></i>
+                                </a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">
+                                    <i class="fas fa-bell"></i>
+                                </a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">
+                                    <div class="profile">
+                                        <img src="immagini/vegeta-ssj4.png" alt="imgprofile">
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                            </li>
+                            <li id="menu-navigation">
+                                <a href="#">
+                                    <i class="fas fa-sliders-h"></i>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
-
-         <script src="main.js" charset="utf-8"></script>
+        <section class="central-card">
+            <div class="container">
+                <div id="wrapper">
+                    <h2 class="title-search active">Dai un'occhiata ai titoli correlati a:
+                        "<span id="titleFind"></span>"
+                    </h2>
+                    <main id="film-find"></main>
+                </div>
+            </div>
+        </section>
+            <!-- TEMPLATE -->
+        <script id="film-template" type="text/x-handlebars-template">
+            <div class="card text-center" style="width: 18rem;">
+             <!--IMMAGINE DA INSERIRE
+             <img src="{{imgposter}}" class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h4 class="card-title">{{titolo}}</h4>
+                <h6>{{titolo_originale}}</h6>
+                <div class="card-flag">
+                    <img src="immagini/{{lingua}}.png">
+                </div>
+                <p class="star">{{{stelle}}}</p>
+              </div>
+            </div>
+        </script>
+        <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
