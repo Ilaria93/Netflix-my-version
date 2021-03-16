@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
+
     <body>
         <header>
             <div class="header-content container">
@@ -40,17 +41,17 @@
                         <ul class="right-menu">
                             <li id="menu-navigation" class="first">
                                 <a href="#">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id="menu navigation" class="second active">
                                 <div class="searchInput">
                                     <span class="icon-search">
-                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-search" aria-hidden="true"></i>
                                     </span>
                                     <input type="text" name="searchInput" placeholder="" id="search">
                                     <span class="icon-close">
-                                        <i class="fas fa-times"></i>
+                                        <i class="fas fa-times" aria-hidden="true"></i>
                                     </span>
                                 </div>
                             </li>
@@ -59,12 +60,12 @@
                             </li>
                             <li id="menu-navigation">
                                 <a href="#">
-                                    <i class="fas fa-gift"></i>
+                                    <i class="fas fa-gift" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id="menu-navigation">
                                 <a href="#">
-                                    <i class="fas fa-bell"></i>
+                                    <i class="fas fa-bell" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id="menu-navigation">
@@ -72,13 +73,13 @@
                                     <div class="profile">
                                         <img src="immagini/vegeta-ssj4.png" alt="imgprofile">
                                     </div>
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li id="menu-navigation">
                                 <a href="#">
-                                    <i class="fas fa-sliders-h"></i>
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>
@@ -95,39 +96,25 @@
                     <main id="film-find"></main>
                 </div>
             </div>
-<<<<<<< HEAD
         </section>
             <!-- TEMPLATE -->
+
         <script id="film-template" type="text/x-handlebars-template">
-            <div class="card text-center" style="width: 18rem;">
-             <!--IMMAGINE DA INSERIRE
-             <img src="{{imgposter}}" class="card-img-top" alt="..."> -->
-              <div class="card-body">
-                <h4 class="card-title">{{titolo}}</h4>
-                <h6>{{titolo_originale}}</h6>
-                <div class="card-flag">
-                    <img src="immagini/{{lingua}}.png">
-                </div>
-                <p class="star">{{{stelle}}}</p>
-              </div>
-            </div>
-        </script>
-        <script src="main.js" charset="utf-8"></script>
-=======
-        </header>
-        <div id="film-find">
-            <!-- TEMPLATE -->
-                <script id="film-template" type="text/x-handlebars-template">
-                    <div class="{{classGenre}}">
-                        <img src='{{posterImg}}' alt="">
-                        <h3>{{titolo}}</h3>
-                        <h4>{{titolo noriginale}}</h4>
-                        <p>{{lingua}}</p>
-                        <p>{{voto}}</p>
+                <div class="card text-center">
+                 <!--IMMAGINE DA INSERIRE-->
+                 <div class="card-img-top" style= "background-image: url('{{imgPoster}}'); background-size:contain;">
+                 </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Titolo: {{titolo}}</h4>
+                    <h6>Titolo originale: {{titolo_originale}}</h6>
+                    <div class="card-flag">
+                        <img src="immagini/{{lingua}}.png">
                     </div>
-                </script>
-        </div>
-         <script src="main.js" charset="utf-8"></script>
->>>>>>> main
+                    <p class="star">{{{stelle}}}</p>
+                    <p> Tipo: {{tipo}} </p>
+                  </div>
+                </div>
+            </script>
+        <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

@@ -122,15 +122,27 @@ body{
     color:white;
 }
 .card{
+    width: 200px;
+    height: 300px;
+    position: relative;
     flex-direction: row;
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    border: 1px solid white;
-    background: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    background: 0px center;
 }
-.card h4, .card h6{
+.card h4, .card h6, p{
     color:white;
+}
+h4 {
+    font-size: 20px;
+}
+h6, p {
+    font-size: 12px;
 }
 .card-flag{
     display: flex;
@@ -147,4 +159,14 @@ body{
 .fa-star{
     font-size: 15px;
     color: #ffb856;
+}
+.card-img-top {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: 2s;
+}
+.card-img-top:hover{
+    opacity: 0;
 }
