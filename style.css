@@ -129,7 +129,7 @@ body{
     border: 1px solid white;
     background: 0;
 }
-.card h4, .card h6{
+.card h4, .card h6, .card p{
     color:white;
 }
 .card-flag{
