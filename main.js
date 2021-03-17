@@ -8,13 +8,13 @@ $(document).ready(function () {
 
     //attivo l'input di ricerca
     $('.first').click(function(){
-        $('.first').addClass('active');
-        $('.second').removeClass('active').addClass('on-click');
+        $('.first').addClass('hide');
+        $('.second').removeClass('hide').addClass('on-click');
     });
     //chiudo l'input di ricerca
     $('.fas.fa-times').click(function(){
-        $('.second').removeClass('on-click').addClass('active');
-        $('.first').removeClass('active');
+        $('.second').removeClass('on-click').addClass('hide');
+        $('.first').removeClass('hide');
     });
 
     //funzione invio per far partire la chiamata ajax
@@ -128,4 +128,6 @@ $(document).ready(function () {
             insertCard(risultatoCorrente, tipologia);
         };
     }
+    //attivo carosello
+    $('.carousel').carousel();
 });

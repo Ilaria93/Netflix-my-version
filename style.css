@@ -48,7 +48,7 @@ header{
     list-style-type: none;
     margin: 0;
 }
-.active{
+.hide{
     display: none;
 }
 .on-click{
@@ -113,13 +113,12 @@ header{
     padding-top:30px;
 }
 .title-search{
+    color:white;
+    padding-bottom: 20px;
     font-size: 20px;
 }
 body{
     background-color: black;
-}
-.title-search{
-    color:white;
 }
 .card{
     width: 200px;
@@ -127,7 +126,7 @@ body{
     position: relative;
     flex-direction: row;
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 20px;
     border-width: 1px;
     border-style: solid;
@@ -169,4 +168,18 @@ h6, p {
 }
 .card-img-top:hover{
     opacity: 0;
+}
+.carousel-caption {
+    right: 0;
+    bottom: 3rem;
+    left: 5%;
+    text-align: left;
+}
+.carousel-caption p{
+    font-size: 16px;
+    margin-top: 25px;
+    width: 40%;
+}
+.title-logo{
+    max-width: 40%;
 }

@@ -7,10 +7,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/d922289bad.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -44,7 +47,7 @@
                                     <i class="fas fa-search" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li id="menu navigation" class="second active">
+                            <li id="menu navigation" class="second hide">
                                 <div class="searchInput">
                                     <span class="icon-search">
                                         <i class="fas fa-search" aria-hidden="true"></i>
@@ -87,16 +90,57 @@
                 </div>
             </div>
         </header>
+        <div class="slider">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="immagini/illusioni_mortali.jpg" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <img class="title-logo" src="https://occ-0-322-784.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABZAeGF0VKerZLch3KJp_ba9UDAA8oMFFY-k9YPcDx6LJOdJc1qWLRZA9lpQp7E-ghy7CSYgXQ8pKcoJsDoXTuW2NotJ6KnY0T6u4.webp?r=105" title="Illusioni mortali" alt="Illusioni mortali">
+                      <p>Quando un'acclamata scrittrice alle prese con il blocco dello scrittore assume una nuova tata per i propri figli, il confine tra finzione e realtà inizia a confondersi.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="immagini/orphn.jpg" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <img class="title-logo" src="immagini/logo_orphan_black.png" title="Illusioni mortali" alt="Illusioni mortali">
+                      <p>Sarah Manning è una ragazza orfana che vive allo sbando, alla giornata. Un giorno, scesa dal treno, alla fermata vede una ragazza intenta a svestirsi e le si avvicina. La donna, fisicamente uguale a Sarah, si gira verso di lei e poi si butta sotto il treno in transito. Sarah decide di prendere la borsa abbandonata dalla donna e di rubarle l'identità.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="immagini/sons.jpg" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <img class="title-logo" src="immagini/sons_logo.png" title="Illusioni mortali" alt="Illusioni mortali">
+                      <p>La serie narra le vicende di un club di motociclisti chiamato Sons of Anarchy ed è ambientata nella città immaginaria di Charming, situata nella Valle di San Joaquin in California.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="immagini/queen.jpg" alt="Four slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <p>In un orfanotrofio del Kentucky negli anni '50 una ragazza scopre di avere un talento incredibile per gli scacchi. Nel frattempo lotta con un problema di dipendenza.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="immagini/Babysitter.jpg" alt="Five slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <img class="title-logo" src="immagini/babisitter_logo.png" title="Illusioni mortali" alt="Illusioni mortali">
+                      <p>Un solitario dodicenne si innamora della sua sexy babysitter. Scoprirà però ben presto come la giovane donna faccia parte di un culto satanico che vuole ucciderlo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
         <section class="central-card">
             <div class="container">
                 <div id="wrapper">
-                    <h2 class="title-search active">Dai un'occhiata ai titoli correlati a:
+                    <h2 class="title-search hide">Dai un'occhiata ai titoli correlati a:
                         "<span id="titleFind"></span>"
                     </h2>
                     <main id="film-find"></main>
                 </div>
             </div>
         </section>
+
             <!-- TEMPLATE -->
 
         <script id="film-template" type="text/x-handlebars-template">
