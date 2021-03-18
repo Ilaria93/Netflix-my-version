@@ -128,6 +128,9 @@ $(document).ready(function () {
             insertCard(risultatoCorrente, tipologia);
         };
     }
+<<<<<<< HEAD
     //attivo carosello
     $('.carousel').carousel();
+=======
+>>>>>>> main
 });
