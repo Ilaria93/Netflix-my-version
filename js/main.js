@@ -41,6 +41,12 @@ $(document).ready(function () {
             var titolo_card = dati.name;
             var titolo_originale_card = dati.original_name;
         }
+        //verifico se c'è un'immagine di copertina
+        if(dati.poster_path !== null) {
+            var img = img_poster_tmdb + dati.poster_path
+        }else {
+            var img = 'immagini/poster-not-available.jpg';
+        }
         //preparo i dati per il template
         var placeholder = {
             'titolo': titolo_card,
@@ -49,7 +55,7 @@ $(document).ready(function () {
             'voto': dati.vote_average,
             'stelle': voteIntoStar(dati),
             'tipo':tipologia,
-            'imgPoster': img_poster_tmdb + dati.poster_path,
+            'imgPoster': img
         };
         var set = template(placeholder);
         //appendo la card con i dati del risultati corrente
