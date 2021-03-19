@@ -1,10 +1,13 @@
 $(document).ready(function () {
-    var film_tmdb = 'https://api.themoviedb.org/3/search/movie'
-    var api_key = '1c1263bf902928bcba1cf9fb01d4296c'
-    var img_poster_tmdb ='https://image.tmdb.org/t/p/w185'
+    var base_tmdb = 'https://api.themoviedb.org/3/';
+    var film_tmdb = 'search/movie';
+    var api_key = '1c1263bf902928bcba1cf9fb01d4296c';
+    var img_poster_tmdb ='https://image.tmdb.org/t/p/w185';
     var html_template =$('#film-template').html();
     var template = Handlebars.compile(html_template);
-    var serie_tmdb = 'https://api.themoviedb.org/3/search/tv'
+    var serie_tmdb = 'search/tv';
+    var movie_genere = 'genre/movie/list';
+    var serie_genere = 'genre/tv/list';;
 
     //attivo l'input di ricerca
     $('.first').click(function(){
@@ -55,7 +58,8 @@ $(document).ready(function () {
             'voto': dati.vote_average,
             'stelle': voteIntoStar(dati),
             'tipo':tipologia,
-            'imgPoster': img
+            'imgPoster': img,
+            'trama':dati.overview,
         };
         var set = template(placeholder);
         //appendo la card con i dati del risultati corrente
@@ -84,7 +88,7 @@ $(document).ready(function () {
             reset();
             //faccio partire le chiamate ajax per cercare i film
             $.ajax({
-                'url':film_tmdb,
+                'url':base_tmdb + film_tmdb,
                 'method':'GET',
                 'data':{
                     'api_key':api_key,
@@ -104,7 +108,7 @@ $(document).ready(function () {
             });
             //faccio partire le chiamate ajax per cercare le serie tv
             $.ajax({
-                'url':serie_tmdb,
+                'url':base_tmdb + serie_tmdb,
                 'method':'GET',
                 'data':{
                     'api_key':api_key,
@@ -116,7 +120,7 @@ $(document).ready(function () {
                     $('#titleFind').text(searchResult);
                     //visualizzo il titolo della pagina
                     $('.title-search').addClass('visible');
-                    risposta_ajax(risposta, 'Serie');
+                    risposta_ajax(risposta, 'Serie Tv');
                 },
                  'error': function() {
                     console.log("Errore nel caricamento della pagina");
@@ -134,6 +138,7 @@ $(document).ready(function () {
             insertCard(risultatoCorrente, tipologia);
         };
     }
+
     //attivo carosello
     $('.carousel').carousel();
 
